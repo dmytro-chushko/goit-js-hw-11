@@ -60,8 +60,7 @@ async function onLoadMore(e) {
 
 async function fetchAndRender() {
   const {theGallery, isTheGallery, isTheGalleryOver} = await pixabay.quary();
-  console.log(theGallery);
- 
+   
   if (!isTheGallery) {
     Notify.failure("Sorry, there are no images matching your search query. Please try again.");
     btnLoadMore.classList.remove('d-none');

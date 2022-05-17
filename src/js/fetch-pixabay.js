@@ -41,17 +41,14 @@ export default class FetchPixabayAPI{
       });
 
       this.params.page += 1;
-      console.log(response);
-
-      
+            
       this.totalHits = response.data.totalHits;
       const theGallery = response.data.hits;
       const isTheGallery = theGallery.length > 0;
       const isTheGalleryOver = this.params.page > Math.ceil(this.totalHits/this.params.per_page);
 
       return { theGallery, isTheGallery, isTheGalleryOver };
-      
-
+    
     } catch (error) {
       console.log(error.response);
     }
