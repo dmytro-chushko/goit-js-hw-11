@@ -5,7 +5,9 @@ a {
 }
 
 .header {
+  width: 100%;
   background-color: var(--bs-blue);
+  z-index: 1;
 }
 
 .search-wrapper {
