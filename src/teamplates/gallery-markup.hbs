@@ -1,0 +1,23 @@
+{{#each this}}
+  <div class="col my-2">
+              <a href="{{largeImageURL}}" class="card">
+                <div class="img-container">
+                  <img src={{webformatURL}} class="card-img-top img-fluid" alt="{{tags}}" loading="lazy" />
+                </div>
+                <div class="card-body d-flex flex-nowrap justify-content-between">
+                  <p class="card-text text-center">
+                    <b>Likes: {{likes}}</b>
+                  </p>
+                  <p class="card-text text-center">
+                    <b>Views: {{views}}</b>
+                  </p>
+                  <p class="card-text text-center">
+                    <b>Comments: {{comments}}</b>
+                  </p>
+                  <p class="card-text text-center">
+                    <b>Downloads: {{downloads}}</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+{{/each}}
