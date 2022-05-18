@@ -43,7 +43,9 @@ async function onSubmit(e) {
   if (totalHits) {
     Notify.success(`Hooray! We found ${totalHits} images.`);
   }
-    
+   
+  pixabay.resetPage();
+
   buttons.toggleSpinner(btn);
 
   btnLoadMore.classList.toggle('d-none');
