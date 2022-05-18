@@ -37,6 +37,8 @@ async function onSubmit(e) {
   const btn = e.target.elements.searchButton;
   buttons.toggleSpinner(btn);
 
+  pixabay.resetPage();
+
   await fetchAndRender();
   
   const totalHits = pixabay.showTotalHits();
@@ -44,8 +46,6 @@ async function onSubmit(e) {
     Notify.success(`Hooray! We found ${totalHits} images.`);
   }
    
-  pixabay.resetPage();
-
   buttons.toggleSpinner(btn);
 
   btnLoadMore.classList.toggle('d-none');
